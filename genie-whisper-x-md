@@ -1,0 +1,86 @@
+
+---
+
+## ⚙️ Required Technologies (Initial Stack)
+
+| System      | Tech                   | Reasoning                                 |
+|-------------|------------------------|--------------------------------------------|
+| Core Agent  | Python 3.11+           | Clean, async-native backend                |
+| ASR         | whisper.cpp or faster-whisper | Local, fast, privacy-respecting       |
+| Wake Word   | Silero or Porcupine    | Lightweight, real-time detection           |
+| VAD         | WebRTC + Silero        | Dual system for robustness                 |
+| TTS         | Coqui TTS / pyttsx3    | Local text-to-speech                       |
+| UI          | Tauri + React          | Fast, cross-platform, secure local UI      |
+| Comms       | WebSocket              | UI ↔ backend in real time                  |
+| Automation  | Claude Code + Cursor   | Agent-first, modular dev flow              |
+
+---
+
+## 🛠️ Initial Dev Tasks for Claude Code Agent
+
+1. ✅ Clone empty GitHub repo: [genie-whisper-x](https://github.com/krowflow/genie-whisper-x)
+2. ✅ Lock down current Git state: `main` branch only
+3. 🚧 Create full folder structure as above
+4. 🚧 Write base files:
+    - `agent.py` with placeholder event loop
+    - `websocket_server.py` stub
+    - `App.tsx` basic shell with `Backend Ready` message
+5. 🚧 Setup:
+    - `requirements.txt` with pinned VAD/Whisper deps
+    - `package.json` and `tauri.config.json` defaults
+6. ✅ Commit + push with message:
+   > "Initial structure and agent framework – Phase 1 complete"
+
+---
+
+## 🧠 AI Agent Roles
+
+| Agent      | Role Description |
+|------------|------------------|
+| Claude Code | Primary build + strike engineer. Builds all backend logic, wiring, UI linkages |
+| Cursor AI   | Precision strike navigator. Refactors, modularizes, visualizes call trees |
+| Augment     | Memory recon + parallel test agent. Pulls logs, flags missing logic |
+
+---
+
+## 🔐 Security & Offline Mode Plan
+
+- Fully local by default (Whisper, wake word, VAD, TTS run locally)
+- OpenAI key is opt-in, used **only for cloud completion or chat**
+- UI shows **AI activity log**, waveform, transcript
+- Agent works fully **offline unless API key is active**
+
+---
+
+## 🔄 Planned Feature Modules
+
+| Module            | Status | Description |
+|-------------------|--------|-------------|
+| Wake Word Engine  | ⏳     | "Hey Genie" trigger |
+| Whisper Inference | ⏳     | CPU-based ASR pipeline |
+| Voice Activity HUD| ⏳     | Real-time waveform + status |
+| Command Engine    | ⏳     | Handle "open browser", etc |
+| Chat Agent (GPT)  | ⏳     | Optional OpenAI call |
+| System Hooks      | ⏳     | Launch apps, open links, etc |
+
+---
+
+## ✅ Success Criteria
+
+- System launches via `npm run dev` or `start-genie.sh`
+- Waveform visible in UI
+- “Hey Genie” wake word prints log
+- Real-time voice → text → action feedback
+- No cloud dependencies unless explicitly invoked
+- Full dev logs stored in `/memory-bank/`
+
+---
+
+## 🧭 Final Orders for Claude Code Agent
+
+> Proceed with deep setup and creation of the initial infrastructure as defined here.  
+> Use MCP Tools if recon or diagnostics are needed.  
+> All actions must be logged to `/memory-bank/` after execution.
+
+🧠 Claude is now authorized to build the true *Genie Whisper X*.
+

@@ -1,0 +1,32 @@
+{
+  "name": "genie-whisper-x",
+  "version": "0.1.0",
+  "description": "Local-first AI voice agent with modular architecture",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:ui\"",
+    "dev:backend": "python backend/agent.py",
+    "dev:websocket": "python websocket/websocket_server.py",
+    "dev:ui": "cd ui && npm run dev",
+    "build": "cd ui && npm run build",
+    "test": "python -m pytest tests/",
+    "setup": "python scripts/setup_models.py"
+  },
+  "keywords": [
+    "voice-assistant",
+    "speech-recognition",
+    "local-ai",
+    "whisper",
+    "tauri",
+    "react"
+  ],
+  "author": "Genie Whisper X Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  }
+}
