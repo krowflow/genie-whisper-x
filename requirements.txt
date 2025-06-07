@@ -1,34 +1,48 @@
-# Genie Whisper X - Python Dependencies
+# Genie Whisper X - Python Dependencies (Production Stack June 2025)
+
+# Core Dependencies
+python-dotenv==1.0.0
+numpy==1.24.3
+
 # Voice Activity Detection
 webrtcvad==2.0.10
-silero-vad==4.0.1
+torch==2.0.1
+torchaudio==2.0.2
 
-# Speech Recognition
+# Audio Processing
+sounddevice==0.4.6
+pyaudio==0.2.13
+
+# Speech Recognition (Whisper)
 faster-whisper==0.10.0
 openai-whisper==20231117
 
-# Text-to-Speech
-coqui-tts==0.22.0
+# Text-to-Speech Engines
 pyttsx3==2.90
+edge-tts==6.1.9
+aiohttp==3.8.5
+
+# Wake Word Detection
+pvporcupine==3.0.0
+speech-recognition==3.10.0
 
 # WebSocket Communication
 websockets==12.0
 
-# Audio Processing
-pyaudio==0.2.13
-sounddevice==0.4.6
-numpy==1.24.3
-
-# Async and Utilities
-asyncio-mqtt==0.16.1
-python-dotenv==1.0.0
-
-# Wake Word Detection
-pvporcupine==3.0.0
-
 # Optional: OpenAI API for cloud features
 openai==1.3.8
+
+# Audio File Processing
+wave
+tempfile
+
+# ONNX Runtime for Silero VAD
+onnxruntime==1.15.1
 
 # Development and Testing
 pytest==7.4.4
 pytest-asyncio==0.21.1
+
+# Production Dependencies
+aiofiles==23.1.0
+psutil==5.9.5
